@@ -1,0 +1,80 @@
+
+
+  <app-header></app-header>
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="row p-5  bg-success align-items-center">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-4 col-md-6 text-light">
+        <h1>The Easiest Way<br>To Make Your<br>Favorite Meal</h1>
+        <p class="my-4" style="text-align:justify;">
+          Discover 100+ recipes in your hand with the best recipes. Helping you find the easiest way to cook.
+        </p>
+        <a routerLink="/all-recipes" class="btn btn-light text-success">Explore Our Recipes</a>
+      </div>
+      <div class="col-lg-6 col-md-6 text-center">
+        <img class="img-fluid landingImg" src="https://www.pngall.com/wp-content/uploads/2/Healthy-Meal.png" alt="Healthy Meal"style="max-height: 450px;">
+      </div>
+    </div>
+
+    <!-- Popular Recipes -->
+    <div class="my-5 p-5 ">
+<div class="d-flex justify-content-between">
+      <h1>Popular Recipes of the Week</h1>
+      <a routerLink="/all-recipes" class="btn btn-success mt-3">View All</a>
+</div>
+      <div class="row my-3">
+@for(recipe of allRecipes;track $index){
+<!-- each recipe card -->
+<div class="col-lg-4 ">
+  <div class="p-3">
+    <img class="card-img-top" [src]="recipe.image" alt="Recipe Image">
+    <div class="card-body">
+      <h5 class="card-title">{{ recipe.name }}</h5>
+    </div>
+  </div>
+</div>
+}
+
+        <!-- Repeat this card structure for other recipes -->
+</div>
+</div>
+
+    <!-- Banner Section -->
+    <div class="row align-items-center my-5" style="background-image: url('https://img.freepik.com/premium-photo/food-banners_583952-13024.jpg'); background-size: cover; background-position: center; height: 400px;">
+      <div class="col-lg-6"></div>
+      <div class="col-lg-6 bg-light rounded p-4">
+        <h3>50+ Recipes That Are Quick and Easy</h3>
+        <p class="text-secondary mt-3">Find the perfect food ideas to start your day in the quickest and easiest way.</p>
+      </div>
+    </div>
+
+    <!-- Download App Section -->
+    <div class="row align-items-center text-light bg-success rounded p-5 my-5">
+      <div class="col-lg-6 text-center">
+        <img src="https://freepngimg.com/download/android/67006-app-play-google-android-store-free-clipart-hd.png" alt="Download App" class="img-fluid" style="max-height: 350px;">
+      </div>
+      <div class="col-lg-6 text-center">
+        <h1>Download App</h1>
+        <h5 class="my-3">
+          Download the app from the App Store or Google Play for a better experience.
+        </h5>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="text-center my-5">
+      <h1>Client Testimonials</h1>
+      <marquee behavior="scroll" direction="left">
+        <div class="d-flex justify-content-center">
+          <div class="rounded border w-75 p-3">
+            <h5>Client Name</h5>
+            <p class="text-justify">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat sint eveniet dolorum iure cum eaque dolor commodi quasi, ratione error molestias placeat!
+            </p>
+          </div>
+        </div>
+      </marquee>
+    </div>
+  </div>
+  <app-footer></app-footer>
